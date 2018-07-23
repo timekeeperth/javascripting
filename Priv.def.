@@ -1,0 +1,30 @@
+2.5.1 :015 > class Foo
+2.5.1 :016?>   private def baz
+2.5.1 :017?>     return "yay"
+2.5.1 :018?>     end
+2.5.1 :019?>   
+2.5.1 :020?>   def bar
+2.5.1 :021?>       baz
+2.5.1 :022?>     end
+2.5.1 :023?>   end
+ => :bar 
+2.5.1 :024 > Foo.new.bar
+ => "yay" 
+2.5.1 :025 >  class Timekeeper
+2.5.1 :026?>   private def salaam
+2.5.1 :027?>     return "salaam to you too"
+2.5.1 :028?>     end
+2.5.1 :029?>   
+2.5.1 :030?>   def star
+2.5.1 :031?>     salaam
+2.5.1 :032?>     end
+2.5.1 :033?>   end
+ => :star 
+2.5.1 :034 > Timekeeper.new.salaam
+Traceback (most recent call last):
+        2: from /Users/ayz/.rvm/rubies/ruby-2.5.1/bin/irb:11:in `<main>'
+        1: from (irb):34
+NoMethodError (private method `salaam' called for #<Timekeeper:0x00007fa0498963b8>)
+2.5.1 :035 > Timekeeper.new.star
+ => "salaam to you too" 
+2.5.1 :036 > 
